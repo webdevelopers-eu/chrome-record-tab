@@ -1,0 +1,66 @@
+{
+  "manifest_version": 3,
+  "name": "Tab Audio Recorder",
+  "version": "2.0.0",
+  "description": "Records tab audio to MP3, named after the page title, and rolls over to a new file when the title changes.",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "tabCapture",
+    "activeTab",
+    "offscreen",
+    "storage",
+    "alarms",
+    "unlimitedStorage"
+  ],
+  "action": {
+    "default_title": "Record tab audio",
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "start-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+R"
+      },
+      "description": "Start recording the active tab"
+    },
+    "stop-recording": {
+      "suggested_key": {
+        "default": "Alt+Shift+S"
+      },
+      "description": "Stop recording"
+    }
+  },
+  "externally_connectable": {
+    "matches": [
+      "http://localhost/*",
+      "http://127.0.0.1/*"
+    ]
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_start"
+    },
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "page-api.js"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    }
+  ]
+}

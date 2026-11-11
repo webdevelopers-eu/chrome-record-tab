@@ -1,0 +1,5 @@
+lamejs 1.2.1 - https://github.com/zhuker/lamejs
+Pure JavaScript MP3 encoder (port of jump3r, which ports libmp3lame).
+
+License: LGPL-3.0 (as declared by the upstream package). Bundled unmodified as
+vendor/lame.min.js. Replace this file with the upstream build when upgrading.
