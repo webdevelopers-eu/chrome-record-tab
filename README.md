@@ -66,10 +66,12 @@ You need:
 Steps:
 
 1. Download this repository. Either click **Code → Download ZIP** on GitHub and
-   unzip it, or clone it with the URL shown on the repository page:
+   unzip it, or clone it:
    ```
-   git clone <repository-url>
+   git clone git@github.com:webdevelopers-eu/chrome-record-tab.git
    ```
+   (or `https://github.com/webdevelopers-eu/chrome-record-tab.git` if you have
+   no SSH key set up)
 2. Remember where the `extension` folder ended up. Use the `extension` folder
    itself, not the repository root: it is the folder that contains
    `manifest.json`.
