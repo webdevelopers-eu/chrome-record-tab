@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "name": "Tab Audio Recorder",
   "version": "2.0.0",
+  "author": "Daniel Sevcik",
   "description": "Records tab audio to MP3, named after the page title, and rolls over to a new file when the title changes.",
   "minimum_chrome_version": "116",
   "permissions": [

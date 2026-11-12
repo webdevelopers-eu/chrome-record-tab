@@ -1,0 +1,19 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+
+# Node (only if you add tooling)
+node_modules/
+npm-debug.log*
+
+# Build output and packaged extension
+*.zip
+*.crx
+*.pem
+dist/
